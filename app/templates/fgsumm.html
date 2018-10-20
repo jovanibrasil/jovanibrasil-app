@@ -1,0 +1,49 @@
+<!DOCTYPE html">
+<html lang="en">
+
+<head>
+	<title>cs-apps</title>
+	<link rel="stylesheet" href="css/pagestyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<%include header.html%>
+
+		<article class="summ-article">
+
+			<h1>Text Summarization</h1>
+
+			<script type=text/javascript>
+				$(function() {
+					$('input#postinfo').bind('click', function() {
+				$.getJSON('/simulate', {
+					cmd: $('input[name="cmd"]').val(),
+					data: $('textarea[name="in"]').val()
+				}, function(data) {
+					$("#out").text(data.result);
+				});
+				return false;
+					});
+				});
+			</script>
+
+			<div>
+				<textarea name="in" rows="20" cols="80"></textarea>
+			</div>
+			<div style="padding:20px">
+				<input type="text" name="cmd"></input>
+				<input type="submit" onclick="javascript:void();" value="Run simulation" id='postinfo'></input>
+			</div>
+			<div>
+				<textarea rows="20" cols="80" id="out"></textarea>
+			</div>
+
+		</article>
+
+	</div>
+
+</html>

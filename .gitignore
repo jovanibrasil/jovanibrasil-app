@@ -1,0 +1,11 @@
+*.swp
+*.pem
+*.key
+*.crt
+.vscode
+*.pyc
+venv
+env
+/__pycache__
+*/node_modules/*
+*.log
