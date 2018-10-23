@@ -6,19 +6,6 @@ div.container {
     box-sizing: border-box;
 }
 
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -26,38 +13,11 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-header a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.3em;
-}
-
-header button {
-    border-radius: 30px;
-    padding: 10px 25px;
-    /*margin-right: 10px;*/
-}
-
 .flex-container { /* menu é um container */
-    display: flex; /* utilizarei o flexbox */
+    /* display: flex; utilizarei o flexbox */
     align-items: center;
     justify-content: space-between;
 }
-
-.menu {
-    flex-grow: 10; /* define a "habilidade" de crescimento*/
-}
-
-.menu ul { /* lista também é um container */
-    display: flex;
-    justify-content: center;
-    list-style: none; /* retira o estilo de lista, neste caso o círculo */
-}
-
-.menu li {
-    margin: 0px 40px;
-}
-
 
 /* article {
     margin-top: 100px;
@@ -70,96 +30,6 @@ header button {
     overflow: hidden;
     text-align: justify;
 } */
-
-footer {
-    color: white;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 80;
-    padding: 1rem;
-    background-color: black;
-    text-align: center;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-}
-
-
-.menu-toggle {
-    float: right;
-    color: #eee;
-    background: #555;
-    border: solid 1px #777;
-    border-radius: 5px;
-    height: 40px;
-    padding: 10px 20px;
-    margin: 20px 15px;
-    display: none;
-}
-
-.menu li:nth-child(5) {
-    display: none;
-}
-
-@media (max-width: 949px) {
-    
-}
-
-@media (max-width: 700px) {
-    .menu-toggle {
-        display: flex;
-    }
-    
-    .menu li:nth-child(5) {
-        display: inline;
-    }
-    .menu li:nth-child(n):nth-child(-n+4) {
-        display: none;
-    }
-}
-
-
-
-/*
-    estilo do home.html
-*/
-
-.circular {
-    border-radius: 50%;
-    background-color: #444;
-}
-
-
-.main-article {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row; 
-    align-content: space-around;
-    margin-top: 100px;  
-}
-
-.left-panel {
-     flex-grow: 1; 
-     text-align: center;
-}
-
-.right-panel {
-    flex-grow: 2; 
-    text-align: center;
-}
-
-@media (max-width: 700px) {
-    .right-panel {
-        display: none;
-    }
-}
 
 
 /*
