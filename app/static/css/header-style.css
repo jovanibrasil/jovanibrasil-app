@@ -98,6 +98,9 @@ header a {
         display: block;
         text-align: left;
     }
+    .right-panel {
+        margin: 10px 20px 10px 20px;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -109,18 +112,6 @@ header a {
 .menu li:nth-child(5) {
     display: none;
 }
-/* 
 
-@media (max-width: 700px) {
-    .menu-toggle {
-        display: flex;
-    }
-    .menu li:nth-child(5) {
-        display: inline;
-    }
-    .menu li:nth-child(n):nth-child(-n+4) {
-        display: none;
-    }
-} */
 
 

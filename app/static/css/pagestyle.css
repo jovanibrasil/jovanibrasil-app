@@ -38,6 +38,23 @@ body {
 
 .single-div {
     margin-left: 50px;
+    margin-right: 50px;
+}
+
+.index {
+     /* display: inline;
+     float: none; */
+     width: 500;
+     margin: auto;
+}
+
+.centered-text {
+    align-content: center;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
 }
 
 

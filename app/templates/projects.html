@@ -16,23 +16,77 @@
         <article class="main-article">
 
             <div class="single-div">
-                <h1>My projects under construction</h1>
-                <ul>
-                    <li>This Web-site</li>
-                    <li>Natural Language Processing</li>
+
+
+                <!-- <h1>My projects under construction</h1> -->
+                <h1 class="centered-text">Meus projetos</h1>
+                  
+                <div class="index">
+                    <h2 class="centered-text">Índice</h2>
                     <ul>
-                        <li>
+                        <li><a href="#this-website">Este Web-site</a></li>
+                        <li><a href="#nlp">Natural Language Processing</a></h2></li>
+                        <ul>
+                            <li><a href="#nlp0">FGSumm - Fuzzy Genetic Text Summarization</a>
+                            </li><li><a href="#nlp1">Essay Checker</a>
+                            </li><li><a href="#nlp2">Time and cause-effect extraction</a></li>
+                        </ul>
+                        <li ><a href="#se">Software engineering</a></li>
+                        <ul>    
+                            <li><a href="#se0">Smart Integrated Development Environment</a></li>
+                            <li><a href="#se1">Android and Java Apps (Web and Desktop)</a></li>
+                        </ul>
+
+                        <li ><a href="#ai">Artificial Intelligence</a></li>
+                        <ul>
+                            <li> <a href="#ai0">Agents Simulation</a></li>
+                            <li> <a href="#ai1">Machine learning implementations</a></li>
+                        </ul>    
+                    </ul>
+                </div>     
+                
+                <ul>
+                    <li id="this-website" folder><h2>Este Web-site</h2></li>
+                        <div folder>
+                            <p>
+                                O objetivo desta página é aplicar e demonstrar os conhecimentos obtidos nos meus estudos em diversas tecnologias.
+                                Por esse motivo, foram utilizadas diferentes tecnologias nos diferentes projetos que são ou serão demonstrados aqui.                      
+                            </p>
+                            <h3>Sobre as páginas Home, Projects e CV</h3>
+                            <p>
+                                    As páginas Home, Projects e CV do frontend são implementadas sem a utilização de bibliotecas ou frameworks, 
+                                    utilizando apenas recursos básicos do desenvolvimento web, como html, css e javascript. Para o seu backend, 
+                                    foi utilizado node runtime para rodar um servidor em javascript responsável por servir as páginas web.  
+                                    
+                                    Note que em Blog ainda está vazio, pois ainda nem foram definidas as tecnologias que serão empregadas.  
+                            </p><p>
+                                    A partir da página Projects, é possível ser redirecionado para projetos específicos que utilizam diferentes 
+                                    tipos de tecnologias no frontend e no backend. Você pode verificar da seção de cada projeto, quais foram as 
+                                    tecnologias utilizadas, assim como o porquê o como da escolha de cada tecnologia.
+                            </p>
+                        </div>
+                    <li id="nlp" folder><h2>Natural Language Processing (3 Projetos)</h2></li>
+                    <ul>
+                        <li id="nlp0">
                             <a href="/fgsumm"> FGSumm - Fuzzy Genetic Text Summarization</a>
-                        </li>
-                        <li>
+                        </li><li id="n  lp1">
                             <a>Essay Checker</a>
+                        </li><li id="nlp2">
+                            <a>Time and cause-effect extraction</a>
                         </li>
                     </ul>
-                    <li>Ontology Engeneering</li>
-                    <li>Smart Integrated Development Environment</li>
-                    <li>Agents Simulation</li>
-                    <li>Android and Java Apps (Web and Desktop)</li>
+                    <li id="se" folder><h2>Software engineering (5 projetos)</h2></li>
+                    <ul>    
+                        <li id="se0">Smart Integrated Development Environment</li>
+                        <li id="se1">Android and Java Apps (Web and Desktop)</li>
+                    </ul>
 
+                    <li id="ai" folder><h2>Artificial Intelligence (2 Projetos)<h2></li>
+                    <ul>
+                        <li id="ai0">Agents Simulation</li>
+                        <li id="ai1">Machine learning implementations</li>
+                    </ul>
+                    
                 </ul>
 
             </div>
@@ -41,3 +95,15 @@
     </div>
 
 </html>
+
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => {
+        folder.onclick = function(e){
+            //debugger
+            const ul = folder.nextElementSibling
+            //console.log(ul)
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
