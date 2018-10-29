@@ -15,7 +15,42 @@
 
 		<article class="summ-article">
 
-			<h1>Text Summarization</h1>
+			<h1>FGSUM - Sumarizador Fuzzy</h1>
+
+			<p>
+				O FGSumm é um sumarizador automático extrativo mono-documento baseado em features que utiliza lógica fuzzy. Em um 
+				sumarizador extrativo, o critério utilizado para seleção das sentenças que devem fazer parte de
+				um sumário é a importância da sentença dentro do texto, que aqui será chamado de informatividade. A informatividade de uma 
+				sentença é calculada em termos dos valores do seu conjunto de features. Por exemplo, sentenças podem ser selecionadas 
+				de acordo com as features de tamanho da sentença e soma das frequências dos termos da sentença no texto. 
+			</p>
+			<p>
+				Quando existe mais de uma feature, a determinação da importância precisa ser calculada através de um mecanismo de 
+				combinação que relacione a importância de cada feature para o cálculo da informatividade da sentença. Este mecanismo pode ser, 
+				por exemplo, uma equação ou algum outro mecanismo capaz de determinar um valor de informatividade através das relações entre as
+				features, como é o caso da lógica fuzzy. 
+			</p>
+			<p>
+				Neste contexto, a ideia do FGSumm é utilizar a capacidade de avaliar conceitos imprecisos e subjetivos da lógica fuzzy
+				como mecanismo de raciocínio para determinar o grau de importância de uma sentença a partir do conjuntos de features 
+				que a representa. Para tanto, features são modeladas como variáveis linguísticas de entrada, suas relações são 
+				descritas através de regras, e a saída do sistema é uma variável linguística que determina a informatividade da sentença para 
+				o seu texto. 
+			</p>
+
+			<div style="width:500px; font-size:80%; text-align:center;">
+				<img src="/fgsum-arch.png" alt="alternate text" width="500" 
+				height="height" style="padding-bottom:0.5em;" />
+				Figura 1 - Arquitetura do sumarizador fuzzy.  
+			</div>
+			
+			<p>
+				Para maximizar a qualidade dos resultados do sistema, cada valor linguístico definido para as variáveis linguísticas tiveram 
+				os coeficientes de sua respectivas funções de pertinência otimizados utilizando um algoritmo genético. Na Figura 1 
+				é apresentada a arquitetura geral da solução fuzzy com otimização que foi implementada. 
+			</p>
+
+			<h1>Solução</h1>
 
 			<script type=text/javascript>
 				$(function() {
@@ -36,13 +71,17 @@
 			</div>
 			<div style="padding:20px">
 				<input type="text" name="cmd"></input>
-				<input type="submit" onclick="javascript:void();" value="Run simulation" id='postinfo'></input>
+				<input type="submit" onclick="javascript:void();" value="Sumarizar" id='postinfo'></input>
 			</div>
 			<div>
 				<textarea rows="20" cols="80" id="out"></textarea>
 			</div>
 
 		</article>
+
+		<p>
+			Você pode acessar detalhes e o código fonte do projeto FGsumm aqui (Github).
+		</p>
 
 	</div>
 
