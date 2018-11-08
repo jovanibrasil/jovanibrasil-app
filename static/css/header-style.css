@@ -21,7 +21,8 @@ header a {
     display: flex; 
     justify-content: center;
     flex-grow: 10; /* define a "habilidade" de crescimento*/
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: black;
     overflow: hidden;
 }
 

@@ -1,0 +1,11 @@
+.index {
+    /* display: inline;
+    float: none; */
+    width: 500;
+    margin: auto;
+}
+
+.anchor {
+    padding-top: 80px;
+    margin-top: -80px;
+}
