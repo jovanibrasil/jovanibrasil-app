@@ -5,6 +5,7 @@ pipeline {
         stage("Building project") {
             steps {
                 echo 'Cloning git'
+                sh 'rm jovanibrasil-app -rf'
                 git([url: 'https://github.com/jovanibrasil/jovanibrasil-app.git', branch: 'master', credentialsId: 'jovanibrasil'])
                 echo 'Installing dependencies ...'
                 sh 'npm install'
