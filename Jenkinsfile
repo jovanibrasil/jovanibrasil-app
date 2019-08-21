@@ -1,16 +1,11 @@
 pipeline {
-    agent { label 'jenkins-slave' }
-    
-    environment {
-        RECAPTCHA_KEY = credentials('RECAPTCHA_KEY');
-    }
-
+    //agent { label 'jenkins-slave' }
     stages {
  
         stage("Building project") {
             steps {
                 echo 'Cloning git'
-                git([url: 'https://github.com/jovanibrasil/jovanibrasil-app.git', branch: 'master', credentialsId: '18a17f19-9870-4bcc-8c7b-75eec38a059a'])
+                git([url: 'https://github.com/jovanibrasil/jovanibrasil-app.git', branch: 'master', credentialsId: 'jovanibrasil'])
                 echo 'Installing dependencies ...'
                 sh 'npm install'
                 echo 'Building ...'
