@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'aws-agent' }
     stages {
  
         stage("Building project") {
