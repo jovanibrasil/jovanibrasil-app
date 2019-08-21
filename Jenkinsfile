@@ -10,7 +10,7 @@ pipeline {
                 echo 'Installing dependencies ...'
                 sh 'npm install'
                 echo 'Building ...'
-                sh 'npm run build --max_old_space_size=512 --prod --build-optimizer --configuration=production'
+                sh 'npm run build --prod --build-optimizer --configuration=production --max_old_space_size=512'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'deploying the project ...'
                 sh 'rm /var/www/jovanibrasil/* -rf'
-                sh 'cp ~/workspace/jovanibrasil-app/dist/jovanibrasil-app/* /var/www/jovanibrasil/ -r'
+                sh 'cp ~/workspace/jovanibrasil.com/dist/jovanibrasil-app/* /var/www/jovanibrasil/ -r'
             }
         }
 
