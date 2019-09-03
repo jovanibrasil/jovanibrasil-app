@@ -6,11 +6,11 @@ pipeline {
             steps {
                 echo 'Cloning git'
                 sh 'rm jovanibrasil-app -rf'
-                git([url: 'https://github.com/jovanibrasil/jovanibrasil-app.git', branch: 'master', credentialsId: 'jovanibrasil'])
+                git([url: 'https://github.com/jovanibrasil/jovanibrasil-app.git', branch: 'master', credentialsId: '9bae9c61-0a29-483c-a07f-47273c351555'])
                 echo 'Installing dependencies ...'
                 sh 'npm install'
                 echo 'Building ...'
-                sh 'npm run build --prod --build-optimizer --configuration=production --max_old_space_size=512'
+                sh 'npm run build --prod --build-optimizer --configuration=production --max_old_space_size=384'
             }
         }
 
@@ -24,15 +24,14 @@ pipeline {
             steps {
                 echo 'deploying the project ...'
                 sh 'rm /var/www/jovanibrasil/* -rf'
-                sh 'cp ~/workspace/jovanibrasil.com/dist/jovanibrasil-app/* /var/www/jovanibrasil/ -r'
+                sh 'cp ~/workspace/jovanibrasil-app/dist/jovanibrasil-app/* /var/www/jovanibrasil/ -r'
             }
         }
 
         stage("Remove temporary files"){
             steps {
                 echo 'cleaning ...'
-                echo 'TODO'
-                // echo 'rm ~/workspace/blog-app ~/workspace/blog-app@tmp -rf'
+                sh 'rm ~/workspace/jovanibrasil-app ~/workspace/jovanibrasil-app@tmp -rf'
             }
         }
 
