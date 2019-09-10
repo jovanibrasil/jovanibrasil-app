@@ -1,19 +1,57 @@
 .navbar {
-    height: 100px;
-    font-size: 1.5em;
     background-color: brown;
+    color: white;
 }
 
-.navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
+.fa.fa-navicon {
+    color:white;
 }
+
+li:hover{
+    cursor: pointer;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    color: black;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+.title-style {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+@media (min-width: 768px) {    
+    .navbar {
+        height: 100px;
+        font-size: 1.5em;
+        padding: 5px 20px;
+    }
+    .navbar-nav > li {
+        display: inline-block;
+        float:none;
+        padding: 5px 20px;
+    }
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+} 
 
 .navbar-nav > li {
-    display: inline-block;
-    float:none;
     padding: 5px 20px;
 }
 
@@ -21,6 +59,41 @@
     color: white;
 }
 
-a:hover {
-    color: darkgray;
+/* li a, .vertical-centered {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li, ul, a {
+    height: 100%;
+} */
+
+/* .navbar-collapse {
+    height: 100%;
+} */
+
+/* li a:hover { 
+    background-color: black !important;
+} */
+
+/* .navbar-brand {
+    color: rgb(207, 162, 77);
+}
+
+.navbar-nav li.active > a {
+	background-color: rgb(207, 162, 77);
+	color: white;
+}
+
+nav-link {
+    height: 100%;
+} */
