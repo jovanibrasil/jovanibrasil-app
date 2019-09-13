@@ -2,7 +2,7 @@
 
 # APP web para o meu site pessoal 
 
-Esta aplicação é o meu site pessoal [jovanibrasil.com](https://github.com/angular/angular-cli). A aplicação foi feita utilizando 
+Esta aplicação é o meu site pessoal [jovanibrasil.com](https://jovanibrasil.com). A aplicação foi feita utilizando 
 Angular versão 7.2.1 e em breve será implementado um conjunto de testes utilizando Karma e Protractor.
 
 ## Rodando
