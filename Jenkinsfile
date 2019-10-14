@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'aws-agent' }
+    agent { label 'digital-ocean-agent' }
     stages {
  
         stage("Building project") {
