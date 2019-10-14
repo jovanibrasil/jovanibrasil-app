@@ -31,7 +31,7 @@ pipeline {
         stage("Remove temporary files"){
             steps {
                 echo 'cleaning ...'
-                sh 'rm ~/workspace/jovanibrasil-app ~/workspace/jovanibrasil-app@tmp -rf'
+                //sh 'rm ~/workspace/jovanibrasil-app ~/workspace/jovanibrasil-app@tmp -rf'
             }
         }
 
