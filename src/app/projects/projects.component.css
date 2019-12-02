@@ -23,3 +23,7 @@ article {
     padding: 10px;
     margin: 30px 10px;
 }
+
+.card-header .title {
+    cursor: pointer;
+}
