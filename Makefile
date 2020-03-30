@@ -8,4 +8,4 @@ test:
 	npm test
 
 generate-deployables:
-	ng build --prod --base-href="https://jovanibrasil.github.io/jovanibrasil-app/"
+	ng build --prod --build-optimizer --configuration=production --base-href="https://jovanibrasil.com/"
