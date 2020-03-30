@@ -9,4 +9,4 @@ test:
 
 generate-deployables:
 	ng build --prod --build-optimizer --configuration=production
-	cp CNAME /docs
+	cp CNAME ./docs/

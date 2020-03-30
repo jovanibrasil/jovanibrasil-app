@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CvComponent } from './cv/cv.component';
 import { BlogComponent } from './blog/blog.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { BlogComponent } from './blog/blog.component';
     AppRoutingModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
