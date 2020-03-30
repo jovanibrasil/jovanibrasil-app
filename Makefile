@@ -8,5 +8,5 @@ test:
 	npm test
 
 generate-deployables:
-	ng build --prod --build-optimizer --configuration=production
+	ng build --prod --build-optimizer --configuration=production --base-href="https://jovanibrasil.com"
 	cp CNAME /docs
